@@ -1,0 +1,9 @@
+teamcity-agent:
+  environment:
+    - AGENT_NAME=RasputinsIceRiver
+    - 'SERVER_URL=teamcity.rasputinlabs.com:8111'
+  image: 'jetbrains/teamcity-agent:latest'
+  ports:
+    - '9090:9090'
+  volumes:
+    - '/var/run/docker.sock:/var/run/docker.sock'
